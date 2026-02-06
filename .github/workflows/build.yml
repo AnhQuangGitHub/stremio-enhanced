@@ -66,10 +66,6 @@ jobs:
       - name: Build the app
         run: npm run dist
 
-      - name: Build for production with electron-builder
-        run: npm run build:${{ matrix.target }}:${{ matrix.arch }}
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: "Debug: List release-builds directory"
         run: |
